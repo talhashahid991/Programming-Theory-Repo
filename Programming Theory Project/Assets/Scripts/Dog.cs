@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inheritence
 public class Dog : Animal
 {
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Dog : Animal
     // Update is called once per frame
     void Update()
     {
+        //abstraction
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump();

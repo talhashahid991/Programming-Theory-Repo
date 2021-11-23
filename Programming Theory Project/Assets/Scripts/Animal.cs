@@ -7,35 +7,18 @@ public class Animal : MonoBehaviour
     public float jumpingPower;
     public Rigidbody animalRb;
     public float movementSpeed;
-    [SerializeField] private string animalName;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string animalName; //encapsulation
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-   /* public void InitializeAnimal(float jumpingPower, Rigidbody animalRb)
-    {
-        jumpingPower = this.jumpingPower;
-        animalRb = this.animalRb;
-    }*/
-
-    public virtual void jump()
+    public virtual void jump()//polymorphism
     {
         animalRb.AddForce(Vector3.up * jumpingPower, ForceMode.Impulse);
     }
 
-    public void MoveForward()
+    public void MoveForward() //abstraction
     {
         transform.Translate(Vector3.forward * movementSpeed);
     }
-    public string Name   // property
+    public string Name   // property //encapsulation
     {
         get { return animalName; }   // get method
         set { 

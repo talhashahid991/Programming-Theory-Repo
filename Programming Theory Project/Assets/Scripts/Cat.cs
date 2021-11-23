@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//inheritence
 public class Cat : Animal
 {
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Cat : Animal
     // Update is called once per frame
     void Update()
     {
+        //abstraction
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump();
@@ -27,7 +29,7 @@ public class Cat : Animal
         }
     }
 
-    public override void jump()
+    public override void jump() //polymorphism
     {
         animalRb.AddForce(Vector3.forward * jumpingPower , ForceMode.Impulse);
         base.jump();
